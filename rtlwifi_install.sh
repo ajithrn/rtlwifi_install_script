@@ -24,7 +24,7 @@ while true; do
   echo "${CYAN}Do you wish to install essential softwares? Y/N${NC}"
   read yn
   case $yn in
-      [Yy]* )  sudo apt-get install linux-headers-generic build-essential git; break;;
+      [Yy]* )  sudo apt-get update && sudo apt-get install linux-headers-generic build-essential git; break;;
       [Nn]* )  break;;
       * ) echo "  Please answer yes or no."
        echo;;
@@ -89,7 +89,7 @@ while true; do
   read yn
   case $yn in
       [Yy]* )  
-        sudo echo "options rtl8723be ant_sel=2" > /etc/modprobe.d/50-$cardName.conf
+        sudo echo "options $cardName ant_sel=2" > 50-$cardName.conf
         echo "  ${GREEN}Antena Configuration completed!${NC}"
         break;;
       [Nn]* )  break;;
