@@ -19,6 +19,18 @@ echo "  ${PURPLE}Script to install rtlwifi drivers Ubuntu 18.04+${NC}"
 echo "  ${BLUE}Created by ajith_rn for Right Click Solutions Thodupuzha, +91-9961278999${NC}"
 echo 
 
+#install and upgrade softwares
+while true; do
+  echo "${CYAN}Do you wish to upgrade softwares and kernal? (Do this if it's a fresh installation. Also, it might take a while to complete, depend according to your system and internet connection speed.) Y/N${NC}"
+  read yn
+  case $yn in
+      [Yy]* )  sudo apt-get update && sudo apt-get upgrade && sudo apt-get autoremove; break;;
+      [Nn]* )  break;;
+      * ) echo "  Please answer yes or no."
+       echo;;
+  esac
+done
+
 #install essential softwares
 while true; do
   echo "${CYAN}Do you wish to install essential softwares? Y/N${NC}"

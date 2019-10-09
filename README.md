@@ -24,3 +24,26 @@ This is shell script to install the rtlwifi drivers for Ubuntu 18.04+ All the dr
     ./rtlwifi_install.sh
     ```
 5. Follow the instructions on the terminal to continue and complete installation.
+
+
+## Troubleshoot low Wifi range.
+
+If you facing issues with Wifi range, the driver might have using wrong antenna. To test this, please run the following commands. (set 1)
+
+```
+DEVICE=$(iw dev | grep Interface | cut -d " " -f2)
+sudo iw dev $DEVICE scan | egrep "SSID|signal|\(on"
+```
+
+If the signal for the AP to which you wish to connect is -60 or less, then you have this problem.
+The fix is to supply the "ant_sel" option. Run the following commands. (set 2)
+
+```
+sudo su -
+echo "options rtl8723de ant_sel=2" > /etc/modprobe.d/50-rtl8723de.conf
+exit
+```
+
+If you have a different driver like rtl8723be, make the appropriate adjustments to the above command.
+
+At this point, do a complete shutdown! The device may retain the old setting with a warm reboot. To be safe, do a power off. After the system come back up, rin the set 1 commands again. If The signals are now a lot stronger, you are done. If not, repeat command set 2 with "ant_sel=1".
