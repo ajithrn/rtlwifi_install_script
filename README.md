@@ -3,9 +3,9 @@
 
 *This Script need active internet connection to run. Please make sure you are connected to internet via ethernet cable before run the script*
 
-This is shell script to install the rtlwifi drivers for Ubuntu 18.04+ All the drivers are installed by this script is getting from [lwfinger/rtlwifi_new
-](https://github.com/lwfinger/rtlwifi_new). You can check the repo ([lwfinger/rtlwifi_new
-](https://github.com/lwfinger/rtlwifi_new)) if you want to know more about supported hardware.
+This is shell script to install the rtlwifi drivers for Ubuntu 18.04+ All the drivers are installed by this script is getting from [rtlwifi-linux/rtlwifi_new
+](https://github.com/rtlwifi-linux/rtlwifi_new). You can check the repo ([rtlwifi-linux/rtlwifi_new
+](https://github.com/rtlwifi-linux/rtlwifi_new)) if you want to know more about supported hardware.
 
 
 ## Get started
