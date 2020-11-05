@@ -64,12 +64,12 @@ then
   echo 
   echo "  ${BLUE}You Selected Extended rtlwifi Drivers${NC}"
   echo 
-  git clone --branch extended https://github.com/lwfinger/rtlwifi_new.git
+  git clone --branch extended https://github.com/rtlwifi-linux/rtlwifi_new.git
 else
   echo 
   echo "  ${BLUE}You Selected Regular rtlwifi Drivers${NC}"
   echo 
-  git clone https://github.com/lwfinger/rtlwifi_new.git
+  git clone https://github.com/rtlwifi-linux/rtlwifi_new.git
 fi
 
 #Make and install scripts
